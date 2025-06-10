@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Membuat Timer Sederhana</title>
+  
+</head>
+<body onload="start_timer();">
+
+    <div class="box">
+      <span id="time">
+        00:00:01
+      </span>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    function start_timer(){
+      var timer = document.getElementById("time").innerHTML;
+      var arr = timer.split(":");
+      var hour = arr[0];
+      var min = arr[1];
+      var sec = arr[2];
+      if(sec == 0) {
+        if(min == 0) {
+          if(hour == 0) {
+            alert("Waktu Habis");
+            window.location.reload();
+            return;
+          }
+          hour--;
+          min = 60;
+          if(hour < 10) hour = "0" + hour;
+        }
+        min--;
+        if(min < 10) min = "0" + min;
+        sec = 59;
+      }
+      else sec--;
+      if (sec < 10) sec == "0" + sec;
+
+      document.getElementById("time").innerHTML = hour + ":" + min + ":" + sec;
+      setTimeout(start_timer, 1000);
+    }
+  </script>

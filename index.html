@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="DK">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="img/icons/Go Younjung.jpg" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
+
+	<title>Ndraaa</title>
+	<script type="text/javascript" src="./js/time.js" async></script>
+	
+	<link href="css/app.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body onload="getIPAddress();">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="">
+          <span class="align-middle">Ndraaa</span>
+        </a>
+		
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Halaman
+					</li>
+					
+
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="index.html">
+              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-profile.html">
+              <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+            </a>
+					</li>
+
+					<li class="sidebar-header">
+						Tugas
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="pages-pkwu.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> </i> <span class="align-middle">PKWU</span>
+						</a>
+					</li>
+
+					<li class="sidebar-header">
+						Jadwal
+					</li>
+
+					<li class="sidebar-item">
+						<a data-bs-target="#multi" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-right-down align-middle"><polyline points="10 15 15 20 20 15"></polyline><path d="M4 4h7a4 4 0 0 1 4 4v12"></path></svg> <span class="align-middle">Jadwal</span>
+						</a>
+						<ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="">
+							<li class="sidebar-item">
+								<a data-bs-target="#multi-2" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">Jadwal</a>
+								<ul id="multi-2" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="pdf/Jadwal UHB.pdf" target="_blank">Jadwal UHB</a>
+									</li>
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="pdf/Jadwal Pelajaran.pdf" target="_blank">Jadwal XI C</a>
+									</li>
+								</ul>
+							</li>
+
+
+							<li class="sidebar-item">
+								<a data-bs-target="#multi-3" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">Update</a>
+								<ul id="multi-3" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a data-bs-target="#multi-3-1" data-bs-toggle="collapse" class="sidebar-link collapsed" aria-expanded="false">Update</a>
+										<ul id="multi-3-1" class="sidebar-dropdown list-unstyled collapse">
+											<li class="sidebar-item">
+												<a class="sidebar-link" href="#">Update</a>
+											</li>
+											<li class="sidebar-item">
+												<a class="sidebar-link" href="#">Update</a>
+											</li>
+										</ul>
+									</li>
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="#">Update</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+
+					<div class="simplebar-placeholder" style="width: auto; height: 1277px;"></div>
+
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">1</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="mail"></i>
+											</div>
+												<div class="text-dark">Messages
+												<div class="text-muted small mt-1">Human 1</div>
+												<div class="text-muted small mt-1">Just Now</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="message-square"></i>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										1 New Messages
+									</div>
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/White.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Human 1</div>
+												<div class="text-muted small mt-1">Hai.</div>
+												<div class="text-muted small mt-1">Just Now</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/Go Younjung.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Human 2</div>
+												<div class="text-muted small mt-1">Ditunggu.</div>
+												<div class="text-muted small mt-1">15m ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/SeolHyun.png" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+											</div>
+											<div class="col-10 ps-2">
+												<div class="text-dark">Human 3</div>
+												<div class="text-muted small mt-1">Ketemu Besok ya.</div>
+												<div class="text-muted small mt-1">4h ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                <i class="align-middle" data-feather="settings"></i>
+              </a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                <img src="img/avatars/White.jpg" class="avatar img-fluid rounded me-1" alt="Adhika Indra P" /> <span class="text-dark">Adhika Indra P</span>
+              </a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="pages-profile.html"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="Settings.html"><i class="align-middle me-1" data-feather="settings"></i> Settings & Privacy</a>
+								<a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3"><strong></strong> Dashboard</h1>
+
+					<div class="row">
+						<div class="col-xl-6 col-xxl-5 d-flex">
+							<div class="w-100">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Date Time</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="feather feather-sun align-middle">
+																<circle cx="12" cy="12" r="5"></circle>
+																<line x1="12" y1="1" x2="12" y2="3"></line>
+																<line x1="12" y1="21" x2="12" y2="23"></line>
+																<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+																<line x1="18.36" y1="18.36" x2="19.78" y2="19.78">
+																</line>
+																<line x1="1" y1="12" x2="3" y2="12"></line>
+																<line x1="21" y1="12" x2="23" y2="12"></line>
+																<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+																<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">
+													<div id="DisplayClock" class="clock" onload="showTime()"></div>
+													<div class="time"></div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Visitors</h5>
+													</div>
+													<script src="./js/visitor.js"></script>
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-middle">
+																<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2">
+																</path>
+																<circle cx="9" cy="7" r="4"></circle>
+																<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+																<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">
+													<div class="visitor" id="visits"></div>
+												</h1>
+												<div class="mb-0">
+													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 70% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Your IP</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wifi align-middle">
+																<path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+																<path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+																<path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+																<line x1="12" y1="20" x2="12.01" y2="20"></line>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<p><h1><span id="ip-address"></span></h1></p>
+												<div class="mb-0">
+													<span class="text-muted">Your Ip Address</span>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title"></h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3"></h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i></span>
+													<span class="text-muted">Sedang Tahap Pengembangan</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="card">
+									<div class="card-header">
+										<h5 class="card-title">Your Info</h5>
+									</div>
+									<div class="card-body">
+										<div class="text-muted" id="device">Os Name: Windows<br>Os Version: 10<br>Browser Name: Chrome<br>Browser Version: 109<br><br>Navigator UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36<br>Navigator AppVersion: 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36<br>Navigator Platform: Win32<br>Navigator Vendor: Google Inc.<br></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<footer class="footer">
+						<div class="container-fluid">
+							<div class="row text-muted">
+								<center>
+									<p class="mb-0">
+										Copyright &copy; <strong> 2023 Adhika Indra P </strong>
+									<p></p>
+								</center>
+							</div>
+						</div>
+					</footer>
+
+				<!-- scirpt -->
+
+	<script src="js/app.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
+			var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
+			document.getElementById("datetimepicker-dashboard").flatpickr({
+				inline: true,
+				prevArrow: "<span title=\"Previous month\">&laquo;</span>",
+				nextArrow: "<span title=\"Next month\">&raquo;</span>",
+				defaultDate: defaultDate
+			});
+		});
+	</script>
+
+<script type="text/javascript">
+	(function () {
+		'use strict';
+
+		var module = {
+			options: [],
+			header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
+			dataos: [
+				{ name: 'Windows Phone', value: 'Windows Phone', version: 'OS' },
+				{ name: 'Windows', value: 'Win', version: 'NT' },
+				{ name: 'iPhone', value: 'iPhone', version: 'OS' },
+				{ name: 'iPad', value: 'iPad', version: 'OS' },
+				{ name: 'Kindle', value: 'Silk', version: 'Silk' },
+				{ name: 'Android', value: 'Android', version: 'Android' },
+				{ name: 'PlayBook', value: 'PlayBook', version: 'OS' },
+				{ name: 'BlackBerry', value: 'BlackBerry', version: '/' },
+				{ name: 'Macintosh', value: 'Mac', version: 'OS X' },
+				{ name: 'Linux', value: 'Linux', version: 'rv' },
+				{ name: 'Palm', value: 'Palm', version: 'PalmOS' }
+			],
+			databrowser: [
+				{ name: 'Chrome', value: 'Chrome', version: 'Chrome' },
+				{ name: 'Firefox', value: 'Firefox', version: 'Firefox' },
+				{ name: 'Safari', value: 'Safari', version: 'Version' },
+				{ name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
+				{ name: 'Opera', value: 'Opera', version: 'Opera' },
+				{ name: 'BlackBerry', value: 'CLDC', version: 'CLDC' },
+				{ name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
+			],
+			init: function () {
+				var agent = this.header.join(' '),
+					os = this.matchItem(agent, this.dataos),
+					browser = this.matchItem(agent, this.databrowser);
+
+				return { os: os, browser: browser };
+			},
+			matchItem: function (string, data) {
+				var i = 0,
+					j = 0,
+					html = '',
+					regex,
+					regexv,
+					match,
+					matches,
+					version;
+
+				for (i = 0; i < data.length; i += 1) {
+					regex = new RegExp(data[i].value, 'i');
+					match = regex.test(string);
+					if (match) {
+						regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
+						matches = string.match(regexv);
+						version = '';
+						if (matches) { if (matches[1]) { matches = matches[1]; } }
+						if (matches) {
+							matches = matches.split(/[._]+/);
+							for (j = 0; j < matches.length; j += 1) {
+								if (j === 0) {
+									version += matches[j] + '.';
+								} else {
+									version += matches[j];
+								}
+							}
+						} else {
+							version = '0';
+						}
+						return {
+							name: data[i].name,
+							version: parseFloat(version)
+						};
+					}
+				}
+				return { name: 'unknown', version: 0 };
+			}
+		};
+
+		var e = module.init(),
+			debug = '';
+
+		debug += 'Os Name: ' + e.os.name + '<br/>';
+		debug += 'Os Version: ' + e.os.version + '<br/>';
+		debug += 'Browser Name: ' + e.browser.name + '<br/>';
+		debug += 'Browser Version: ' + e.browser.version + '<br/>';
+
+		debug += '<br/>';
+		debug += 'Navigator UserAgent: ' + navigator.userAgent + '<br/>';
+		debug += 'Navigator AppVersion: ' + navigator.appVersion + '<br/>';
+		debug += 'Navigator Platform: ' + navigator.platform + '<br/>';
+		debug += 'Navigator Vendor: ' + navigator.vendor + '<br/>';
+
+		document.getElementById('device').innerHTML = debug;
+	}());
+
+	function getIPAddress() {
+			fetch('https://api.ipify.org/?format=json')
+			.then(response => response.json())
+			.then(data => {
+				document.getElementById("ip-address").innerHTML = data.ip;
+			})
+			.catch(error => console.error(error));
+		}
+
+</script>
+
+
+</body>
+
+</html>

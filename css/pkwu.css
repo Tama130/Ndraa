@@ -1,0 +1,12 @@
+#horizontal-list {
+    display: flex;
+  }
+  
+  .item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+    
+  }
+  
+  
